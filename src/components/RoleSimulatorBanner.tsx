@@ -11,12 +11,25 @@ export function RoleSimulatorBanner() {
   const { currentRole, setCurrentRole } = useTraceability();
 
   return (
-    <div className="sticky top-0 z-30 bg-emerald-950 px-3 pt-2.5 pb-3 shadow-md">
-      <div className="mb-2 flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-amber-400">
-        <Eye size={12} />
-        {UI_TEXTS.simulatorTitle}
+    <header className="sticky top-0 z-30 border-b border-[#DFE7E1] bg-[var(--color-surface)] px-4 py-3">
+      <div className="mb-3 flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <img src="/pypore-mark.svg" alt="" className="h-11 w-11" />
+          <div>
+            <p className="font-display text-[25px] font-extrabold leading-none text-[#10201A]">
+              Pypor<span className="text-[#B3522A]">é</span>
+            </p>
+            <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.22em] text-[#5B6B63]">
+              Trazabilidad ganadera
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-widest text-[#B3522A]">
+          <Eye size={12} />
+          Demo
+        </div>
       </div>
-      <div role="tablist" className="grid grid-cols-3 gap-1 rounded-lg bg-emerald-900/60 p-1">
+      <div role="tablist" aria-label={UI_TEXTS.simulatorTitle} className="grid grid-cols-3 gap-1 rounded-lg border border-[#DFE7E1] bg-[#F3F5F1] p-1">
         {ROLE_ORDER.map((role) => {
           const isActive = role === currentRole;
           return (
@@ -25,10 +38,10 @@ export function RoleSimulatorBanner() {
               role="tab"
               aria-selected={isActive}
               onClick={() => setCurrentRole(role)}
-              className={`rounded-md px-1 py-2 text-[11px] font-semibold leading-tight transition ${
+              className={`rounded-[6px] px-1 py-2 text-[11px] font-semibold leading-tight transition ${
                 isActive
-                  ? 'bg-emerald-600 text-white shadow'
-                  : 'text-emerald-100/70 hover:bg-emerald-800'
+                  ? 'bg-[#1E6B4F] text-white'
+                  : 'text-[#5B6B63] hover:bg-white'
               }`}
             >
               {ROLE_CONFIGS[role].shortLabel}
@@ -36,6 +49,6 @@ export function RoleSimulatorBanner() {
           );
         })}
       </div>
-    </div>
+    </header>
   );
 }

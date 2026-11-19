@@ -19,7 +19,7 @@ type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
 const EVENT_TYPES = Object.keys(EVENT_TYPE_LABELS) as EventType[];
 
 const inputClassName =
-  'w-full rounded-lg border border-stone-300 bg-white px-3 py-2.5 text-sm text-stone-900 outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20';
+  'w-full rounded-[8px] border border-[#CAD8D0] bg-white px-3 py-2.5 text-sm text-[#10201A] outline-none transition focus:border-[#1E6B4F] focus:ring-2 focus:ring-[#1E6B4F]/15';
 
 export function RegisterEventView() {
   const { registerSignedEvent } = useTraceability();
@@ -69,20 +69,20 @@ export function RegisterEventView() {
 
   return (
     <section>
-      <h2 className="mb-4 text-base font-bold text-emerald-950">{VIEW_LABELS.REGISTER.title}</h2>
-      <form onSubmit={handleSubmit} className="space-y-4 rounded-xl border border-stone-200 bg-white p-4 shadow-sm">
+      <h2 className="mb-4 text-base font-extrabold text-[#10201A]">{VIEW_LABELS.REGISTER.title}</h2>
+      <form onSubmit={handleSubmit} className="space-y-4 rounded-[12px] border border-[#DFE7E1] bg-white p-4">
         <div>
-          <span className="mb-1.5 block text-xs font-semibold text-stone-600">Tipo de hito</span>
-          <div className="grid grid-cols-2 gap-2">
+          <span className="mb-1.5 block text-xs font-semibold text-[#5B6B63]">Tipo de hito</span>
+          <div className="grid grid-cols-2 gap-1 rounded-[8px] border border-[#DFE7E1] bg-[#F3F5F1] p-1">
             {EVENT_TYPES.map((type) => (
               <button
                 key={type}
                 type="button"
                 onClick={() => handleTypeChange(type)}
-                className={`rounded-lg border px-3 py-2 text-xs font-semibold transition ${
+                className={`rounded-[6px] px-3 py-2 text-xs font-semibold transition ${
                   type === eventType
-                    ? 'border-emerald-950 bg-emerald-950 text-white'
-                    : 'border-stone-300 bg-white text-stone-600 hover:border-emerald-600'
+                    ? 'bg-[#1E6B4F] text-white'
+                    : 'text-[#5B6B63] hover:bg-white'
                 }`}
               >
                 {EVENT_TYPE_LABELS[type]}
@@ -92,7 +92,7 @@ export function RegisterEventView() {
         </div>
 
         <label className="block">
-          <span className="mb-1.5 block text-xs font-semibold text-stone-600">Título</span>
+          <span className="mb-1.5 block text-xs font-semibold text-[#5B6B63]">Título</span>
           <input
             required
             value={title}
@@ -104,7 +104,7 @@ export function RegisterEventView() {
 
         {EVENT_FORM_FIELDS[eventType].map((field) => (
           <label key={field} className="block">
-            <span className="mb-1.5 block text-xs font-semibold text-stone-600">{field}</span>
+            <span className="mb-1.5 block text-xs font-semibold text-[#5B6B63]">{field}</span>
             <input
               value={fieldValues[field] ?? ''}
               onChange={(changeEvent) =>
@@ -118,15 +118,15 @@ export function RegisterEventView() {
         <button
           type="submit"
           disabled={isLoading}
-          className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-950 py-3 text-sm font-bold text-white transition hover:bg-emerald-900 disabled:opacity-70"
+          className="flex w-full items-center justify-center gap-2 rounded-[8px] bg-[#1E6B4F] py-3 text-sm font-bold text-white transition hover:bg-[#185940] disabled:opacity-70"
         >
           {isLoading ? <Loader2 size={16} className="animate-spin" /> : <ShieldCheck size={16} />}
           {isLoading ? UI_TEXTS.signingLabel : UI_TEXTS.submitLabel}
         </button>
 
         {status === 'success' && lastSignedEvent && (
-          <div className="rounded-lg border border-emerald-300 bg-emerald-50 p-3">
-            <p className="flex items-center gap-1.5 text-xs font-bold text-emerald-700">
+          <div className="rounded-[8px] border border-[#CFE0D6] bg-[#E3EEE8] p-3">
+            <p className="flex items-center gap-1.5 text-xs font-bold text-[#1E6B4F]">
               <CheckCircle2 size={14} />
               {UI_TEXTS.signedSuccess} · {UI_TEXTS.hashVerified}
             </p>
@@ -141,15 +141,15 @@ export function RegisterEventView() {
         {status === 'error' && (
           <div
             role="alert"
-            className="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 p-3 text-xs text-red-800"
+            className="flex items-start gap-2 rounded-[8px] border border-[#DDAF9D] bg-[#FBF5F2] p-3 text-xs text-[#7D3C21]"
           >
-            <TriangleAlert size={14} className="mt-0.5 shrink-0 text-red-600" />
+            <TriangleAlert size={14} className="mt-0.5 shrink-0 text-[#B3522A]" />
             <p className="flex-1 font-medium leading-relaxed">{errorMessage}</p>
             <button
               type="button"
               aria-label={UI_TEXTS.dismissError}
               onClick={() => setStatus('idle')}
-              className="shrink-0 rounded p-0.5 text-red-500 transition hover:bg-red-100"
+              className="shrink-0 rounded p-0.5 text-[#B3522A] transition hover:bg-[#F2DED5]"
             >
               <X size={14} />
             </button>

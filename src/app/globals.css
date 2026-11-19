@@ -1,12 +1,49 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-ibm-plex-sans);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+:root {
+  --color-page: #f3f5f1;
+  --color-surface: #ffffff;
+  --color-surface-soft: #fbfcfa;
+  --color-primary: #1e6b4f;
+  --color-earth: #b3522a;
+  --color-night: #10201a;
+  --color-secondary: #5b6b63;
+  --color-border: #dfe7e1;
+  --color-positive: #e3eee8;
+  --radius-card: 12px;
+  --radius-control: 8px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: #f5f5f4;
-  color: #1c1917;
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  background: var(--color-page);
+  color: var(--color-night);
+  font-family: var(--font-ibm-plex-sans), system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-archivo), var(--font-ibm-plex-sans), system-ui, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
 }

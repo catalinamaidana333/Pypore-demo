@@ -18,7 +18,7 @@ export function HederaTransactionLink({
       target="_blank"
       rel="noopener noreferrer"
       title={transactionId}
-      className={`inline-flex items-center gap-1.5 font-mono text-emerald-700 underline decoration-emerald-600/40 underline-offset-2 transition hover:text-emerald-900 ${className}`}
+      className={`inline-flex items-center gap-1.5 font-mono text-[#1E6B4F] underline decoration-[#9DB9AB] underline-offset-2 transition hover:text-[#10201A] ${className}`}
     >
       <ExternalLink size={11} className="shrink-0" />
       {truncateHash(transactionId)}

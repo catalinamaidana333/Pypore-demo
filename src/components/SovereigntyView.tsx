@@ -21,18 +21,18 @@ export function SovereigntyView() {
 
   if (currentRole !== 'PRODUCER') {
     return (
-      <section className="rounded-2xl border border-amber-300 bg-amber-50 p-6 text-center">
-        <LockKeyhole size={32} className="mx-auto text-amber-600" />
-        <h2 className="mt-3 text-base font-bold text-amber-800">{UI_TEXTS.producerOnlyTitle}</h2>
-        <p className="mt-1 text-sm text-amber-700">{UI_TEXTS.producerOnlyBody}</p>
+      <section className="rounded-[12px] border border-[#DDAF9D] bg-[#FBF5F2] p-6 text-center">
+        <LockKeyhole size={32} className="mx-auto text-[#B3522A]" />
+        <h2 className="mt-3 text-base font-bold text-[#7D3C21]">{UI_TEXTS.producerOnlyTitle}</h2>
+        <p className="mt-1 text-sm text-[#8F563D]">{UI_TEXTS.producerOnlyBody}</p>
       </section>
     );
   }
 
   return (
     <section>
-      <h2 className="mb-4 flex items-center gap-2 text-base font-bold text-emerald-950">
-        <ShieldHalf size={18} className="text-amber-600" />
+      <h2 className="mb-4 flex items-center gap-2 text-base font-extrabold text-[#10201A]">
+        <ShieldHalf size={18} className="text-[#B3522A]" />
         {VIEW_LABELS.SOVEREIGNTY.title}
       </h2>
       <ul className="space-y-3">
@@ -42,16 +42,16 @@ export function SovereigntyView() {
           return (
             <li
               key={key}
-              className={`rounded-xl border bg-white p-4 shadow-sm transition ${
-                isShared ? 'border-emerald-200' : 'border-amber-300'
+                className={`rounded-[12px] border bg-white p-4 transition ${
+                isShared ? 'border-[#CFE0D6]' : 'border-[#DDAF9D]'
               }`}
             >
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <h3 className="text-sm font-bold text-emerald-950">{config.label}</h3>
+                  <h3 className="text-sm font-bold text-[#10201A]">{config.label}</h3>
                   <span
                     className={`text-[10px] font-bold uppercase tracking-widest ${
-                      isShared ? 'text-emerald-600' : 'text-amber-600'
+                      isShared ? 'text-[#1E6B4F]' : 'text-[#B3522A]'
                     }`}
                   >
                     {isShared ? UI_TEXTS.sharingOn : UI_TEXTS.sharingOff}
@@ -63,18 +63,18 @@ export function SovereigntyView() {
                   aria-label={config.label}
                   onClick={() => toggleSovereigntyPolicy(key)}
                   className={`relative h-7 w-12 shrink-0 rounded-full transition ${
-                    isShared ? 'bg-emerald-600' : 'bg-amber-600'
+                    isShared ? 'bg-[#1E6B4F]' : 'bg-[#B3522A]'
                   }`}
                 >
                   <span
-                    className={`absolute top-0.5 h-6 w-6 rounded-full bg-white shadow transition-all ${
+                    className={`absolute top-0.5 h-6 w-6 rounded-full bg-white transition-all ${
                       isShared ? 'left-[22px]' : 'left-0.5'
                     }`}
                   />
                 </button>
               </div>
-              <p className="mt-2 text-xs text-stone-600">{config.description}</p>
-              <p className="mt-1.5 text-xs font-medium text-stone-800">{config.impact}</p>
+              <p className="mt-2 text-xs text-[#5B6B63]">{config.description}</p>
+              <p className="mt-1.5 text-xs font-medium text-[#10201A]">{config.impact}</p>
             </li>
           );
         })}
