@@ -143,55 +143,106 @@ export const SEED_ANIMAL_RECORD: AnimalRecord = {
     shareGeneticData: false,
   },
   events: [
-    {
-      id: 'evt-001-nac',
-      timestamp: '2024-09-12T08:30:00.000Z',
-      type: 'NACIMIENTO',
-      title: 'Nacimiento y Caravaneo Oficial',
-      metadata: {
-        'Potrero': 'Lote 4 - Tajamar',
-        'Peso al Nacer': '34 kg',
-        'Padre': 'Braford Gran Campeón Mercedes 2021',
-        'Madre': 'Vaquillona RP 4210',
-        'Caravana Visual': 'Amarilla Corrientes 8842',
-      },
-      visibilityCategory: 'shareGeneticData',
-      previousHash: GENESIS_PREVIOUS_HASH,
-      hederaTransactionId: '0.0.11003724-1792214697-886430608',
-      hashscanUrl: 'https://hashscan.io/testnet/transaction/0.0.11003724-1792214697-886430608',
-    },
-    {
-      id: 'evt-002-aftosa',
-      timestamp: '2024-11-20T10:15:00.000Z',
-      type: 'VACUNACION',
-      title: 'Campaña Oficial Antiaftosa (SENASA)',
-      metadata: {
-        'Vacuna': 'Aftosa Bivalente',
-        'Dosis': '2 ml subcutánea',
-        'Veterinario Matrícula': 'MP-CTES 1492',
-        'Campaña': '2da Campaña 2024 Corrientes',
-        'Certificado Acta': 'ACTA-SENASA-2024-8831',
-      },
-      visibilityCategory: 'shareSanitaryHistory',
-      previousHash: '0.0.11003724-1792214697-886430608',
-      hederaTransactionId: '0.0.11003724-1792214700-750845560',
-      hashscanUrl: 'https://hashscan.io/testnet/transaction/0.0.11003724-1792214700-750845560',
-    },
-    {
-      id: 'evt-003-pesaje',
-      timestamp: '2025-03-10T14:45:00.000Z',
-      type: 'PESAJE',
-      title: 'Pesaje de Destete Precoz',
-      metadata: {
-        'Peso Bruto': '198 kg',
-        'Ganancia Diaria': '0.920 kg/día',
-        'Balanza': 'Báscula Digital Tru-Test S3',
-        'Estado Corporal': '4/5',
-      },
-      visibilityCategory: 'shareWeightMetrics',
-      previousHash: '0.0.11003724-1792214700-750845560',
-      hederaTransactionId: '0.0.11003724-1792214702-696914161',
-      hashscanUrl: 'https://hashscan.io/testnet/transaction/0.0.11003724-1792214702-696914161',
-    },
-  ],
+
+{
+
+"id": "evt-001-nac",
+
+"timestamp": "2024-09-12T08:30:00.000Z",
+
+"type": "NACIMIENTO",
+
+"title": "Nacimiento y Caravaneo Oficial",
+
+"metadata": {
+
+"Potrero": "Lote 4 - Tajamar",
+
+"Peso al Nacer": "34 kg",
+
+"Padre": "Braford Gran Campeón Mercedes 2021",
+
+"Madre": "Vaquillona RP 4210",
+
+"Caravana Visual": "Amarilla Corrientes 8842"
+
+},
+
+"visibilityCategory": "shareGeneticData",
+
+"previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+
+"hederaTransactionId": "0.0.11527401-1795094957-277252967",
+
+"hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.11527401-1795094957-277252967"
+
+},
+
+{
+
+"id": "evt-002-aftosa",
+
+"timestamp": "2024-11-20T10:15:00.000Z",
+
+"type": "VACUNACION",
+
+"title": "Campaña Oficial Antiaftosa (SENASA)",
+
+"metadata": {
+
+"Vacuna": "Aftosa Bivalente",
+
+"Dosis": "2 ml subcutánea",
+
+"Veterinario Matrícula": "MP-CTES 1492",
+
+"Campaña": "2da Campaña 2024 Corrientes",
+
+"Certificado Acta": "ACTA-SENASA-2024-8831"
+
+},
+
+"visibilityCategory": "shareSanitaryHistory",
+
+"previousHash": "0.0.11527401-1795094957-277252967",
+
+"hederaTransactionId": "0.0.11527401-1795094962-406896068",
+
+"hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.11527401-1795094962-406896068"
+
+},
+
+{
+
+"id": "evt-003-pesaje",
+
+"timestamp": "2025-03-10T14:45:00.000Z",
+
+"type": "PESAJE",
+
+"title": "Pesaje de Destete Precoz",
+
+"metadata": {
+
+"Peso Bruto": "198 kg",
+
+"Ganancia Diaria": "0.920 kg/día",
+
+"Balanza": "Báscula Digital Tru-Test S3",
+
+"Estado Corporal": "4/5"
+
+},
+
+"visibilityCategory": "shareWeightMetrics",
+
+"previousHash": "0.0.11527401-1795094962-406896068",
+
+"hederaTransactionId": "0.0.11527401-1795094962-244488460",
+
+"hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.11527401-1795094962-244488460"
+
+}
+
+],
 };
