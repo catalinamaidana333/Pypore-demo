@@ -21,10 +21,10 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pyporé · Trazabilidad Ganadera Soberana",
+  title: "Traza · Trazabilidad Ganadera Soberana",
   description: "Pasaporte digital de ganado con firma criptográfica y soberanía de datos del productor.",
   icons: {
-    icon: "/pypore-icon.svg",
+    icon: "/traza-icon.svg",
   },
 };
 

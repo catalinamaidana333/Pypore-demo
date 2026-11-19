@@ -6,7 +6,7 @@ async function createTopic(): Promise<void> {
 
   try {
     const response = await new TopicCreateTransaction()
-      .setTopicMemo('pypore-mvp livestock traceability')
+      .setTopicMemo('traza-mvp livestock traceability')
       .execute(client);
     const receipt = await response.getReceipt(client);
 

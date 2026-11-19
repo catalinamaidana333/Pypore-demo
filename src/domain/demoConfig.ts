@@ -108,7 +108,7 @@ export const VIEW_LABELS: Record<AppView, { title: string; navLabel: string }> =
 };
 
 export const UI_TEXTS = {
-  appName: 'Pypore',
+  appName: 'Traza',
   sovereignIdentity: 'Identidad Soberana Activa',
   hashVerified: 'Hedera HCS Verificado',
   protectedData: 'Dato protegido por Soberanía del Productor',

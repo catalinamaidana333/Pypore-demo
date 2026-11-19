@@ -20,7 +20,7 @@ function TimelineEvent({ event, isLocked }: { event: TraceabilityEvent; isLocked
         title={isLocked ? 'Pendiente' : 'Verificado'}
       >
         <img
-          src="/pypore-mark.svg"
+          src="/traza-mark.svg"
           alt=""
           className={`h-5 w-5 rounded-full bg-white p-0.5 ${isLocked ? 'opacity-80' : ''}`}
         />

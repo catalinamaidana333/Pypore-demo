@@ -14,10 +14,10 @@ export function RoleSimulatorBanner() {
     <header className="sticky top-0 z-30 border-b border-[#DFE7E1] bg-[var(--color-surface)] px-4 py-3">
       <div className="mb-3 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <img src="/pypore-mark.svg" alt="" className="h-11 w-11" />
+          <img src="/traza-mark.svg" alt="" className="h-11 w-11" />
           <div>
             <p className="font-display text-[25px] font-extrabold leading-none text-[#10201A]">
-              Pypor<span className="text-[#B3522A]">é</span>
+              Traz<span className="text-[#B3522A]">a</span>
             </p>
             <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.22em] text-[#5B6B63]">
               Trazabilidad ganadera

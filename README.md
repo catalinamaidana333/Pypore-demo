@@ -1,8 +1,8 @@
-# Pypore · Trazabilidad Ganadera Soberana
+# Traza · Trazabilidad Ganadera Soberana
 
 Demo/MVP de **pasaporte digital de ganado** con registro de eventos en Hedera Hashgraph (HCS) y control del productor sobre qué información comparte con terceros.
 
-**[Ver la demo](https://pypore-demo.vercel.app)**
+**[Ver la demo](https://traza-demo.vercel.app)**
 
 ## ¿Qué hace el proyecto?
 
